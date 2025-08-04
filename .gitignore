@@ -25,7 +25,6 @@ x86/
 
 # === Visual Studio ===
 .vs/
-*.sln
 *.vcxproj*
 *.opensdf
 *.sdf
