@@ -1,0 +1,51 @@
+# === Compiled files ===
+*.exe
+*.dll
+*.o
+*.obj
+*.so
+*.a
+*.out
+
+# === Build folders ===
+build/
+Build/
+bin/
+debug/
+release/
+x64/
+x86/
+
+# === Qt Creator ===
+*.user
+*.user.*
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# === Visual Studio ===
+.vs/
+*.sln
+*.vcxproj*
+*.opensdf
+*.sdf
+*.ipch
+*.cache
+*.db
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# === Editor folders ===
+.idea/
+.vscode/
+*.swp
+
+# === Logs and temp ===
+*.log
+*.tmp
+*.bak
+*.old
