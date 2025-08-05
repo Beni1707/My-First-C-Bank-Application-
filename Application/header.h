@@ -16,18 +16,13 @@ public:
 	string city;
 	string country;
 	string residenceAdresse;
-	struct dateOfBirth
-	{
-		int date;
-		string month;
-		int year; 
-	};
+	
 
 	struct SecurityQuestions
 	{
-		string question1;
-		string question2;
-		string question3;
+		string questionContainer;
+		string question[4];
+		string answer[4];
 	};
 	
 	//Constructor
@@ -36,7 +31,7 @@ public:
 
 	//Methods :
 	void login(map <string, User>&);
-	void createNewAccount(User & user, map <string,User>&);
+	void createNewAccount(User & user, map <string,User>&, map<string, string>& box2);
 	void modifyPassword(map <string, User>&);
 	//void printInformations(User & user);
 
