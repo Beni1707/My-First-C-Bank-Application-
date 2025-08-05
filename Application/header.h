@@ -1,11 +1,16 @@
+//This file contains all the headers needed for the app 
+
 #pragma once
 #include <string>
 #include <map>
 using namespace std;
+
+//Creating the first Object User 
 class User {
 private :
-	int idConnexion;
+	int idConnexion;// The automatic Id COnnexion 
 public:
+	//All the information about the user 
 	string firstName;
 	string lastName;
 	string emailAdresse;
@@ -17,7 +22,7 @@ public:
 	string country;
 	string residenceAdresse;
 	
-
+	//This structure for managing security questions 
 	struct SecurityQuestions
 	{
 		string questionContainer;
@@ -30,9 +35,9 @@ public:
 	User();
 
 	//Methods :
-	void login(map <string, User>&);
-	void createNewAccount(User & user, map <string,User>&, map<string, string>& box2);
-	void modifyPassword(map <string, User>&);
-	//void printInformations(User & user);
+	void login(map <string, User>&); // For login in the app
+	void createNewAccount(User & user, map <string,User>&, map<string, string>& box2); //Tp create a New Account 
+	void modifyPassword(map <string, User>&); //TO modify the passWord 
+	//void printInformations(User & user); //We will use it later 
 
 };
