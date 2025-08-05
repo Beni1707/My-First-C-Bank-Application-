@@ -9,7 +9,7 @@ using namespace std;
 
 User::User(string emailAdresse, string passWord) 
 	:  emailAdresse(emailAdresse), passWord(passWord) {};
-User::User() :
+User::User() : //This constructor is definied by default 
 	emailAdresse(), passWord() {};
 
 
@@ -28,14 +28,16 @@ User::User() :
 		cout << "First Name: ";
 		getline(cin, user.firstName);
 		
-		cout << "Last Name: ";
-		getline(cin, lastName);
+		cout << "Last Name: "; 
+		getline(cin, lastName);// The user enters his lastname
 
 		cout << "Email Adress: ";
-		getline(cin, user.emailAdresse);
-		cout << "Pass word: ";
-		getline(cin, user.passWord);
+		getline(cin, user.emailAdresse); //The user enters his lastname
 
+		cout << "Pass word: ";
+		getline(cin, user.passWord); //The user enters his lastname
+
+		//This serie of questions will show up to allows the user to choose security questions which will be suitable for him to easily remember the answers in case he forget his password.
 		cout << endl;
 		cout << "In case you loose your password, we will have to make sure that you are the one who want to modify your password.In order toorganise it, you will chose 3  among these following questions which are more easy for you to remember the answers, in order to get back your account." << endl << endl;
 		cout << "1.What is your Best friend name ? " << endl;
@@ -46,7 +48,7 @@ User::User() :
 		cout << "6.what is the name of your first dog or cat ?" << endl;
 		
 		
-		//We introduce the for loop to allow the user choosing the 3 security questions
+		//Those boolean variables will turn true when the user will chose one of these question in order to avoid the double choices
 		bool verify1=false;
 		bool verify2 =false;
 		bool verify3= false;
@@ -56,22 +58,23 @@ User::User() :
 
 		for (int i = 0; i < 3; i++)
 		{
-			string choosenQuestion;
-		   //this variable will be used to verify that the user do not choose the same question twice
-			cout << endl;
+			string choosenQuestion;// we will save each choosen question in this string variable
+		   
+			cout << endl;// Space
 			cout << "Choose The question number " << i+1<<": ";
 			cin >> choice;
-			cin.ignore();
+			cin.ignore();// ignores the space between the lines 
 			 
-			
+			//This menu manages the choice of the user for the security question 
 				switch (choice)
 				{
 				case 1:
 				{
-						if (verify1==true)
+						if (verify1==true) //This condition verifies each time if the boolean is true. If it the case, it means that the question one has already been choosen by the user.
+
 						{
 							cout << "You can not choose this question anymore, choose another one please: ";
-
+							//So, He needs to choose again
 							cin >> choice;
 							cin.ignore();
 							//We recall the switch to have the right Question choosen.
@@ -195,12 +198,12 @@ User::User() :
 							getline(cin, choosenQuestion);
 						}
 						
-						verify1 = true;
+						verify1 = true; // We turn the boolean in true so that the user cannot choose it anymore 
 
 				}break;
 				case 2:
 				{
-					if (verify2 == true)
+					if (verify2 == true)// Please View the first case comments to understand 
 					{
 						cout << "You can not choose this question anymore, choose another one please: ";
 						cin >> choice;
@@ -327,12 +330,12 @@ User::User() :
 						cout << "What is the name of the city you were born: ";
 						getline(cin, choosenQuestion);
 					}
-					verify2 = true;
+					verify2 = true;// Please View the first case comments to understand 
 				}break;
 				case 3:
 				{
 
-					if (verify3 == true)
+					if (verify3 == true)// Please View the first case comments to understand 
 					{
 						cout << "You can not choose this question anymore, choose another one please: ";
 						cin >> choice;
@@ -458,14 +461,14 @@ User::User() :
 						cout << "What was the childhood name of your father: ";
 						getline(cin, choosenQuestion);
 
-					}verify3 = true;
+					}verify3 = true;// Please View the first case comments to understand 
 
 
 				}break;
 
 				case 4:
 				{
-					if(verify4 == true)
+					if(verify4 == true)// Please View the first case comments to understand 
 					{
 						cout << "You can not choose this question anymore, choose another one please: ";
 						cin >> choice;
@@ -593,12 +596,12 @@ User::User() :
 						getline(cin, choosenQuestion);
 
 					}
-					verify4 = true;
+					verify4 = true;// Please View the first case comments to understand 
 
 				}break;
 				case 5:
 				{
-					if (verify5 == true)
+					if (verify5 == true)// Please View the first case comments to understand 
 					{
 						cout << "You can not choose this question anymore, choose another one please: ";
 						cin >> choice;
@@ -724,12 +727,12 @@ User::User() :
 						getline(cin, choosenQuestion);
 
 
-					}verify5 = true;
+					}verify5 = true;// Please View the first case comments to understand 
 				}break;
 
 				case 6:
 				{
-					if (verify4 == true)
+					if (verify4 == true)// Please View the first case comments to understand 
 					{
 						cout << "You can not choose this question anymore, choose another one please: ";
 						cin >> choice;
@@ -855,7 +858,7 @@ User::User() :
 						cout << "What is the name of your first dog or cat: ";
 						getline(cin, choosenQuestion);
 
-					}verify6 = true;
+					}verify6 = true;// Please View the first case comments to understand 
 
 				}break;
 
@@ -868,10 +871,11 @@ User::User() :
 				}
 
 				
-				//We created an array where we saved all the choosen questions and their answers so , we will match each other in an map
-				securityQuestions.question[i] = securityQuestions.questionContainer;
-				securityQuestions.answer[i] = choosenQuestion;
-				box2[securityQuestions.question[i]] = securityQuestions.answer[i];
+				//We created an array where we saved all the choosen questions and their answers so , we will match each other in an map.
+				
+				securityQuestions.question[i] = securityQuestions.questionContainer;//The array saves the choosen questions  in each iteration 
+				securityQuestions.answer[i] = choosenQuestion;// The array saves the answers in each iteration 
+				box2[securityQuestions.question[i]] = securityQuestions.answer[i];// The map is connecting each question to his appropriate answer
 
 
 		}
@@ -912,16 +916,16 @@ User::User() :
 	//login function 
 	void User::login(map<string, User>& box)
 	{
-		User user;
-		string mailAdress;
-		string passWordKey;
+		User user; //We create a variable in the User Type 
+		string mailAdress; // This mail adress 
+		string passWordKey;// The password 
 		cout << endl;
 		cout << "\t Login " << endl << endl;
 		cout << "Email: ";
-		getline(cin, mailAdress);
+		getline(cin, mailAdress); // The user enters his email Adress
 
 		cout << "Pass Word: ";
-		getline(cin, passWordKey);
+		getline(cin, passWordKey); // The user enters his password 
 
 		//Verification in the map 
 		 
@@ -934,24 +938,26 @@ User::User() :
 		{
 			//verifies id
 			bool found = false;
-			for (auto it = box.begin(); it != box.end(); it++)
+			for (auto it = box.begin(); it != box.end(); it++) // This loop goes to all the map from the beginning to the end 
 			{
-				if (it->first == mailAdress)
+				if (it->first == mailAdress) // COmpares the first case of the map , which is the email address saved in #createNewAccount function, to mail address the user is typing to connect
 				{
-					if (it->second.passWord == passWordKey)
+					if (it->second.passWord == passWordKey)// Compares the passWords from the map to this one typed for login 
 					{
-						cout << "Successfully connected !" << endl;
+						cout << "Successfully connected !" << endl;// Connected !
 						
-						found = true;
+						found = true; //	The boolean is true cause we are connected
 						break;
 
 					}
 					else
 					{
+						//Wrong password
 						cout << "The pass word does not match, please try again !" << endl;
 					}
 				}
 				else {
+					//Wrong Email address
 					cout << "The account with this email Adress does not exist, please try again !" << endl;
 				}
 			}
