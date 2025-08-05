@@ -864,7 +864,123 @@ User::User() : //This constructor is definied by default
 
 				default:
 					//This message will appear when the user enter the invalide wrong value
-					cout << "Bad choice, choose among those 6 questions." << endl;
+					cout << "Bad choice, choose among those 6 questions: ";
+					cin >> choice;
+					cin.ignore();
+					//We recall the switch to have the correct question
+					switch (choice)
+					{
+					case 1:
+					{
+						if (verify1 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: ";
+
+							cin >> choice;
+							cin.ignore();
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "What is your Best friend name";
+							cout << "What is your Best friend name: ";
+							getline(cin, choosenQuestion);
+						}
+
+						verify1 = true;
+
+					}break;
+					case 2:
+					{
+						if (verify2 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: ";
+							cin >> choice;
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "What is the name of the city you were born ";
+							cout << "What is the name of the city you were born: ";
+							getline(cin, choosenQuestion);
+						}
+						verify2 = true;
+					}break;
+					case 3:
+					{
+
+						if (verify3 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: ";
+							cin >> choice;
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "What was the childhood name of your father ";
+							cout << "What was the childhood name of your father: ";
+							getline(cin, choosenQuestion);
+
+						}verify3 = true;
+
+
+					}break;
+
+					case 4:
+					{
+						if (verify4 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: ";
+							cin >> choice;
+
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "What is the name of your paternal grand-father?";
+							cout << "What is the name of your paternal grand-father: ";
+							getline(cin, choosenQuestion);
+
+						}
+						verify4 = true;
+
+					}break;
+					case 5:
+					{
+						if (verify5 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: " << endl;
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "What is the name of your maternal grand-father ?";
+							cout << "What is the name of your maternal grand-father: ";
+							getline(cin, choosenQuestion);
+
+
+						}verify5 = true;
+					}break;
+
+					case 6:
+					{
+						if (verify4 == true)
+						{
+							cout << "You can not choose this question anymore, choose another one please: ";
+							cin >> choice;
+						}
+						else {
+							//In this case, we save the choosen question , in the string variable securityQuestions.Container
+							securityQuestions.questionContainer = "what is the name of your first dog or cat ";
+							cout << "What is the name of your first dog or cat: ";
+							getline(cin, choosenQuestion);
+
+						}verify6 = true;
+
+					}break;
+
+					default:
+						//This message will appear when the user enter the invalide wrong value
+						cout << "Bad choice, choose among those 6 questions." << endl;
+						break;
+
+
+					}
 					break;
 
 
