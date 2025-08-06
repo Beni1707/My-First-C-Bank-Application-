@@ -37,6 +37,7 @@ public:
 	//Methods :
 	void login(map <string, User>&); // For login in the app
 	void createNewAccount(User & user, map <string,User>&, map<string, string>& box2); //Tp create a New Account 
+	void questionOfSecurity(map<string,string>&box2);
 	void modifyPassword(map <string, User>&); //TO modify the passWord 
 	//void printInformations(User & user); //We will use it later 
 
