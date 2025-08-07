@@ -17,9 +17,14 @@ The project does not use a real database, instead relying on C++ sequential and 
 - Qt and QML (UI)
 - Standard Template Library containers for data management
 
+## Instalation 
+git clone https://github.com/Beni1707/My-First-C-Bank-Application-.git
+git pull origin main 
+
 ## Limitations
 - No persistent data storage (all data lost on exit)
 - No encryption or advanced security measures
 
 ## Purpose
 Designed for learners passionate about C++ who want to practice GUI development and basic banking operations without complex database integration.
+
