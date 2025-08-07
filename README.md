@@ -34,7 +34,10 @@ This project does **not use a real database**. Instead, it relies on C++ sequent
 # Clone the repository
 git clone https://github.com/Beni1707/My-First-C-Bank-Application-.git
 
-⚠️ ## Limitations
+# Pull the latest changes (optional if clone is fresh)
+git pull origin main
+```
+⚠️ Limitations
 No persistent data storage (all data is lost when the program exits)
 
 No encryption or security layer (not suitable for production)
@@ -49,4 +52,6 @@ Understand basic banking operations
 Transition from console-based apps to dynamic GUI design using Qt and QML
 
 Gain experience in managing data without jumping directly into complex databases
+
+
 
