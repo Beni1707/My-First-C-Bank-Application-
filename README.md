@@ -37,21 +37,17 @@ git clone https://github.com/Beni1707/My-First-C-Bank-Application-.git
 # Pull the latest changes (optional if clone is fresh)
 git pull origin main
 ```
-⚠️ Limitations
-No persistent data storage (all data is lost when the program exits)
+⚠️ ## Limitations
+-No persistent data storage (all data is lost when the program exits)
+-No encryption or security layer (not suitable for production)
 
-No encryption or security layer (not suitable for production)
+🎯## Purpose
+-This project is designed for learners passionate about C++ who want to:
+-Practice core logic development
+-Understand basic banking operations
+-Transition from console-based apps to dynamic GUI design using Qt and QML
+-Gain experience in managing data without jumping directly into complex databases
 
-🎯 Purpose
-This project is designed for learners passionate about C++ who want to:
-
-Practice core logic development
-
-Understand basic banking operations
-
-Transition from console-based apps to dynamic GUI design using Qt and QML
-
-Gain experience in managing data without jumping directly into complex databases
 
 
 
