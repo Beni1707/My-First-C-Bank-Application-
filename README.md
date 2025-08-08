@@ -1,66 +1,63 @@
-# Banking Application in C++ with Qt/QML
+Simple Login, Password Creation & Modification in C++
+This is a beginner-friendly project built in C++.
+For now, it runs entirely in the terminal, but the goal is to later integrate it with a Qt/QML graphical interface.
 
-This is a beginner-level banking application built in **C++** using **Qt/QML** for the graphical user interface.
+The application allows:
 
-The project is being developed in two stages:  
-1. **Terminal-based version (in progress):** All core logic and features are being developed first through the console.  
-2. **Graphical Interface (coming soon):** In the following weeks, we’ll integrate a fluid and dynamic user interface using Qt and QML.
+Creating a new password
 
-It includes essential banking features such as user identity verification during login, account creation, and inter-account transactions.  
-An administrator interface is also available for managing all user accounts and transactions.
+Logging in with existing credentials
 
-This project does **not use a real database**. Instead, it relies on C++ sequential and associative containers to store data in memory — making it perfect for beginners learning both logic and basic data management.
+Modifying an existing password
 
----
+This code will serve as a reusable foundation for future projects, such as full banking applications or other management systems.
 
-## 🚀 Features
-- User login with identity verification  
-- Account creation  
-- Money transfers between accounts  
-- Admin view of all accounts and transaction history
+🚀 Features
+Login – Enter username and password to access the system
 
----
+Password creation – Create a secure password for new users
 
-## 🛠️ Technologies Used
-- **C++** – Backend logic  
-- **Qt & QML** – User interface (upcoming)  
-- **STL containers** – For in-memory data storage
+Password modification – Change an existing password after verification
 
----
+In-memory storage – All credentials are kept only while the program is running
 
-## 📦 Installation
+🛠️ Technologies Used
+C++ – Core logic
 
-```bash
+STL containers – For temporary credential storage
+
+(Future) Qt & QML – For a graphical user interface
+
+📦 Installation
+```
 # Clone the repository
 git clone https://github.com/Beni1707/My-First-C-Bank-Application-.git
 
 # Pull the latest changes (optional if clone is fresh)
 git pull origin main
 ```
-## ⚠️ Limitations
+⚠️ Limitations
+No persistent storage – Credentials disappear when the program closes
 
-- No persistent data storage (all data is lost when the program exits)  
-- No encryption or security layer (not suitable for production use)
+No encryption – Passwords are stored as plain text (for learning only)
 
----
+Not production-ready – Educational purpose only
 
-## 🎯 Purpose
+🎯 ## Purpose
+This project is designed to:
 
-This project is designed for learners passionate about C++ who want to:
+Practice basic user authentication logic
 
-- Practice core logic development  
-- Understand basic banking operations  
-- Transition from console-based apps to dynamic GUI design using Qt and QML  
-- Gain experience in managing data without jumping directly into complex databases
-Tu peux copier-coller ça tel quel dans ton README.md.
-Tu veux aussi une section "Future Improvements" ou "Next Steps" pour montrer ce que tu prévois d’ajouter ?
+Learn credential management in C++
 
+Build a codebase that can be expanded into more complex applications later
 
+📌 Next Steps
+Add Qt/QML GUI for a modern, interactive interface
 
+Implement password hashing for better security
 
+Store credentials in a real database instead of memory
 
-
-
-
-
-
+👤 Author
+Béni Kiwa Malonga
